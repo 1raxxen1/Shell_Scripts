@@ -1,0 +1,25 @@
+server{
+        server_name 
+	 adjure.in 
+	www.adjure.in 
+	3.110.48.124 ;
+
+        location  /favicon.ico { access_log off; log_not_found off; }
+        location /static/ {
+                
+                root /home/ubuntu/adjure2/project2/project2/;
+                        }
+
+        location /static/admin/ {
+
+                root /home/ubuntu/adjure2/project2/;
+}
+        
+        location /media/{
+                autoindex on;
+                alias /home/ubuntu/adjure2/project2/media/;
+}
+        location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
