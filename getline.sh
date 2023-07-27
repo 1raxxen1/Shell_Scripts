@@ -1,7 +1,7 @@
 
 #clear comments with double hash when in production server
 #start virtual environment to access settings
-## Set the path to your virtual environment activation script
+##path to virtual environment activation script
 ##venv_activate="/home/ubuntu/adjure2/project2/venv/bin/activate"
 ##if [-f "$venv_activate"]; then 
 ##echo "Activating Virtual Environment"
